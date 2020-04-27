@@ -15,6 +15,7 @@ The purpose of this project is to apply the basics about Django programming.
 - [x] Register user for Admin panel ($ python manage.py createsuperuser)
 - [x] Add models to Admin panel
 - [ ] Add a front-end framework (Materialize, Bootstrap, ...)
-- [ ] Add the respective code for making a REST API for the models
+- [x] Add the respective code for making a REST API for the models (serializers)
 - [x] Code what's needed 4 recicling templates 
-- [ ] Make GET and POST requests 
+- [x] Make GET requests 
+- [ ] Make POST requests
