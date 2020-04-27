@@ -1,0 +1,58 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+    background-color: darkslategrey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-orientation: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+.user-note-form {
+    background-color: #42455a;
+    padding: 0 auto;
+    width: 100%;
+}
+
+label {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+form {
+    width: 50%;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px; 
+    margin: 0px 8px;
+    /* 
+    border: 2px solid blue;
+    */    
+}
+
+button {
+    background-color: #42455a;
+    color: white;   
+    padding: 10px 10px;
+}
+
+textarea {
+    width: 100%;
+    margin: 0;
+    width: 1015px;
+    height: 162px;
+}

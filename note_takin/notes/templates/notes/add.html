@@ -1,0 +1,30 @@
+{% extends 'notes/base.html' %}
+<!-- Form for register a note with its user name -->
+{% block content %}
+    <div class="user-note-form">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div>
+                <label for="uname">User Name</label>
+                <!--
+                <input type="text" id="uname" name="uname"><br/>
+                -->
+                <select name="select_users" id="sel-users">
+                    {% for user in users %}
+                        <option value="sel-users-{{ forloop.counter }}"> {{ user.user_name }} </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div>
+                <label for="unotetitle"> Note Title </label>
+                <input type="text" id="unotetitle" name="unotetitle"><br/>
+            </div>
+            <div>
+                <label for="unotetext"> Note Text </label> <br/>
+                <!-- Use CSS to place the textarea in a fized size -->
+                <textarea id="unotetext" name="unotetext" placeholder="Write something..."></textarea> <br/>
+            </div>
+            <button type="submit" value="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

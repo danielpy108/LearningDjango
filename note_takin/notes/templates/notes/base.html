@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <!-- Static files (.css, .js) -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}">
+    <!-- Page title -->
+    <title>Note App</title>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

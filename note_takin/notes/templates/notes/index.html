@@ -1,0 +1,30 @@
+<!-- Inherit from base.html template -->
+{% extends 'notes/base.html' %}
+<!-- Everything that goes here, put it inside the block content tag -->
+{% block content %}
+{% if users %}
+    <h1> Note taking app </h1>
+    <hr/>
+    {% for user in users %}
+        <a href="{% url 'notes:about' user_id=user.id %}"> {{ user.user_name }} </a>
+        {% for note in user.note_set.all %}
+            <ul>
+                <li> {{ note.note_title }} | {{ note.note_date }}  </li>
+                <ul>
+                    <li> {{ note.note_text }} </li>
+                </ul>
+            </ul> 
+        {% endfor %}
+    {% endfor %}
+{% else %}
+    <h1> There are no data at all... </h1>
+{% endif %}
+
+<br/>
+<br/>
+<br/>
+<button style="padding-top: 15px;
+               padding-bottom: 15px;
+               "> Add Note </button>
+
+{% endblock %}

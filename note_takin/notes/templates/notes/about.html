@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+    {% if user %}
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Name </th>
+                        <th> Age </th>
+                        <th> Country code </th>
+                        <th> Notes published </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th> {{ user.user_name }} </th>
+                        <th> {{ user.user_age }} </th>
+                        <th> {{ user.user_country_code }} </th>
+                        <th> {{ user.note_set.all|length }} </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+    
+    {% if error_msg %} <h2 style="color:red;"> {{ error_msg }} </h2> {% endif %}
+</body>
+</html>
