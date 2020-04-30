@@ -13,19 +13,18 @@
         <!-- If user has no notes -->
         {% ifequal user.note_set.all|length 0 %}
             <br/>
-            <br/>
         {% else  %}
-        {% for note in user.note_set.all %}
-        <div>
-            <ul>
-                <li> {{ note.note_title }} | {{ note.note_date }}  </li>
+            {% for note in user.note_set.all %}
+            <div class="note-container">
                 <ul>
-                    <li> {{ note.note_text }} </li>
-                </ul>
-            </ul> 
-        </div>
-        <br/>
-        {% endfor %}
+                    <li> {{ note.note_title }} | {{ note.note_date }}  </li>
+                    <ul>
+                        <li> {{ note.note_text }} </li>
+                    </ul>
+                </ul> 
+            </div>
+            <br/>
+            {% endfor %}
         {% endifequal %}
     {% endfor %}
     </div>
@@ -41,3 +40,11 @@
                "> Add Note </button>
 
 {% endblock %}
+
+
+<!--
+    MOVE OBJECT UP OR DOWN
+        padding -> Move <units> in top, bottom, left, right directions
+        margin -> Move <units> in all 4 directions
+    
+-->
