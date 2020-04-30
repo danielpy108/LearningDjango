@@ -9,13 +9,17 @@ from django.shortcuts import Http404
 @api_view(['GET'])
 def overview(request):
     api_urls = {
-        'List': ['/user-list/', 
-                 '/notes-list/'],
-        'Detail View': ['/user/<str:user_name>',
-                        '/note/<int:pk>'],
-        'Create': '/notes-create/',
-        'Update': '/notes-update/<int:pk>/',
-        'Delete': '/notes-delete/<int:pk>/',
+        'List': [ '/user-list/', 
+                  '/notes-list/'],
+        'Detail View': [ '/user/<str:user_name>',
+                         '/note/<int:pk>'],
+        'Create': [ '/user-create/', 
+                   '/notes-create/'],
+        'Update': [ '/user-update/<int:pk>',
+                    '/notes-update/<int:pk>/'],
+        'Delete': [ 
+                    '/user-delete/<str:user_name>'
+                    '/notes-delete/<int:pk>/']
     }
     return Response(api_urls)
 
@@ -40,3 +44,11 @@ def detailViewUser(request, user_name):
     else:
         serializer = UserSerializer(user, many=False)
         return Response(serializer.data)
+
+
+@api_view(['POST'])
+def createUser(request):
+    serializer = UserSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
