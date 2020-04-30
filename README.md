@@ -17,6 +17,6 @@ The site, currently look like this:
 ![alt text][user-detail]
 
 
-[notes]: https://github.com/danielpy108/LearningDjango/tree/master/Screenshots/notes.png "Route: /notes"
-[user-list]: https://github.com/danielpy108/LearningDjango/tree/master/Screenshots/Read.png "Route: /api/user-list"
-[user-detail]: https://github.com/danielpy108/LearningDjango/tree/master/Screenshots/userdetail.png "Route: /api/user/<str:user_name>"
+[notes]: https://github.com/danielpy108/LearningDjango/blob/master/Screenshots/notes.png?raw=true "Route: /notes"
+[user-list]: https://github.com/danielpy108/LearningDjango/blob/master/Screenshots/Read.png?raw=true "Route: /api/user-list"
+[user-detail]: https://github.com/danielpy108/LearningDjango/blob/master/Screenshots/userdetail.png/?raw=true "Route: /api/user/<str:user_name>"
