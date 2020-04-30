@@ -7,8 +7,10 @@
 a {
     color: white;
     background-color: darkslategrey;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
     text-orientation: uppercase;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
@@ -32,7 +34,7 @@ label {
 }
 
 form {
-    width: 50%;
+    width: 100%;
 }
 
 input {
@@ -55,4 +57,10 @@ textarea {
     margin: 0;
     width: 1015px;
     height: 162px;
+}
+
+.username-container {
+    /*padding: 5px 5px 0 0;*/ 
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
