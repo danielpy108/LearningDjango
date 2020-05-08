@@ -2,42 +2,54 @@
 {% extends 'notes/base.html' %}
 <!-- Everything that goes here, put it inside the block content tag -->
 {% block content %}
-{% if users %}
-    <h1> Note taking app </h1>
-    <hr/>
-    <div class="users-container">
-    {% for user in users %}
-        <div class="username-container">    
-            <a href="{% url 'notes:about' user_id=user.id %}"> {{ user.user_name }} </a>
-        </div>
-        <!-- If user has no notes -->
-        {% ifequal user.note_set.all|length 0 %}
-            <br/>
-        {% else  %}
-            {% for note in user.note_set.all %}
-            <div class="note-container">
-                <ul>
-                    <li> {{ note.note_title }} | {{ note.note_date }}  </li>
-                    <ul>
-                        <li> {{ note.note_text }} </li>
-                    </ul>
-                </ul> 
-            </div>
-            <br/>
-            {% endfor %}
-        {% endifequal %}
-    {% endfor %}
-    </div>
-{% else %}
-    <h1> There are no data at all... </h1>
-{% endif %}
 
-<br/>
-<br/>
-<br/>
-<button style="padding-top: 15px;
-               padding-bottom: 15px;
-               "> Add Note </button>
+<div class="main-container row">
+    <div class="col s3">
+        <!-- Grey navigation panel -->
+        This is the left panel
+     </div>
+    
+    <div class="col s9">
+        <!-- Teal page content  -->
+        {% if users %}
+        <h1> Note taking app </h1>
+        <hr/>
+        <div class="users-container">
+            {% for user in users %}
+                <div class="username-container">    
+                    <a href="{% url 'notes:about' user_id=user.id %}"> {{ user.user_name }} </a>
+                </div>
+                <!-- If user has no notes -->
+                {% ifequal user.note_set.all|length 0 %}
+                    <br/>
+                {% else  %}
+                    {% for note in user.note_set.all %}
+                    <div class="note-container">
+                        <ul>
+                            <li> {{ note.note_title }} | {{ note.note_date }}  </li>
+                            <ul>
+                                <li> {{ note.note_text }} </li>
+                            </ul>
+                        </ul> 
+                    </div>
+                    <br/>
+                    {% endfor %}
+                {% endifequal %}
+            {% endfor %}
+        </div>
+    {% else %}
+        <h1> There are no data at all... </h1>
+    {% endif %}
+
+    <br/>
+    <br/>
+    <br/>
+    <button style="padding-top: 15px;
+                padding-bottom: 15px;
+                "> Add Note </button>
+            This is the right panel
+        </div>
+</div>
 
 {% endblock %}
 

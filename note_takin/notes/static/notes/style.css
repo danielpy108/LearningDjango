@@ -67,10 +67,10 @@ ul {
     padding-top: 15px;
     padding-bottom: 15px;
     position: relative;
-    left: 100px;
+    left: 0px;
 }
 
 .users-container {
     position: relative;
-    left: 800px;
+    left: 0px;
 }
