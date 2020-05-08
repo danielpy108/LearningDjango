@@ -6,6 +6,15 @@ As the time goes on, I'll be improving the way this site looks and the way the b
 
 I know the front-end is shitty but over time as I learn more concepts about css.
 
+## Requirements
+
+Django and rest\_framework
+```
+$ pip install Django==3.0.6 djangorestframework markdown django-filter
+```
+
+Rest Framework
+
 ## How it lookz
 
 The site, currently look like this:

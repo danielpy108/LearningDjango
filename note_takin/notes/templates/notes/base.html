@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Static files (.css, .js) -->
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}">
@@ -13,7 +16,41 @@
     <title>Note App</title>
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
+    <header> 
+        <nav class="nav-extended" style="background-color:#424242;">
+            <div class="nav-wrapper"> 
+                <a class="brand-logo"> Thendingz </a>
+                <ul id="menu" class="right hide-on-med-and-down">
+                    <li><a class="btn" href="#"> Home </a></li>
+                    <li><a class="btn" href="#"> Labz </a></li>
+                    <li>
+                        <a class="dropdown-trigger btn" data-target="dropdownHumanz" href="#"> Humanz </a>
+                        <ul id="dropdownHumanz" class="dropdown-content">
+                            <li><a href="#!"> Login </a></li>
+                            <li><a href="#!"> Sign Up </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="page-footer" style="background-color: #424242">
+        <div class="footer-container">
+            As above so below
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Custom Javascript -->
+    <script type="text/javascript">
+        $('.dropdown-trigger').dropdown();
+    </script>
 </body>
 </html>
