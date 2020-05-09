@@ -18,6 +18,6 @@ The purpose of this project is to apply the basics about Django programming.
 - [x] Add the respective code for making a REST API for the models (serializers)
 - [x] Code what's needed 4 recicling templates 
 - [x] Make GET requests 
-- [ ] Make POST requests
+- [x] Make POST requests
 - [ ] Create a form for register a user to the db (POST)
 - [ ] Create a form to register a note post to the user's table (POST)
