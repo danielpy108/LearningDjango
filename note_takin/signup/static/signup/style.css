@@ -1,0 +1,53 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background: white url("images/blur.jpg");
+    background-size: cover;
+}
+
+label {
+    color: white;
+}
+
+
+.signUpWrapper {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    width: 400px;
+    height: 770px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: rgba(53, 51, 51, 0.644);
+    border-radius: 10px;
+}
+
+.signUpWrapper h2 {
+    text-align: center;
+    color: white
+}
+
+.SIField {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.SIField input {
+    width: inherit;
+}
+
+.SIFieldGender {
+    
+}
+
+.submitButton {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: #418caf;
+    position: relative;
+    left: 160px;
+}

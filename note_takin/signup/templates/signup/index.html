@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'signup/style.css' %}">
+    <title> Sign Up </title>
+</head>
+<body>
+    <div class="signUpWrapper">
+        <h2> Sign Up </h2>
+        <form >
+            <div class="SIField">
+                <label> Name </label> <br/>
+                <input type="text" placeholder="Enter your name">
+            </div>
+            <div class="SIField">
+                <label> Age </label> <br/>
+                <input type="number">
+            </div>
+            <div class="SIField">
+                <label> Birthday </label> <br/>
+                <input type="date">
+            </div>
+            <div class="SIFieldGender">
+                <label> Gender </label> <br/>   
+                <p style="color: white;"> Male </p>
+                <input type="radio">
+                <p style="color: white"> Female </p>
+                <input type="radio">
+                <p style="color: white;"> Other </p>
+                <input type="radio">
+            </div>
+            <div class="SIField">
+                <label> Cellphone </label> <br/>
+                <input type="text" placeholder="Enter your cellphone">
+            </div>
+            <div class="SIField">
+                <label> Email </label> <br/>
+                <input type="email" placeholder="Enter your mail">
+            </div>
+            <div class="SIField">
+                <label> Password </label> <br/>
+                <input type="password" placeholder="Enter your password">
+            </div>
+            <div class="SIField">
+                <label> Confirmation </label> <br/>
+                <input type="password" placeholder="Rewrite your password">
+            </div>
+            <input type="submit" class="submitButton" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
