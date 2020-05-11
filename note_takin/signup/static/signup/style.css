@@ -51,3 +51,7 @@ label {
     position: relative;
     left: 160px;
 }
+
+::placeholder {
+    font-family: 'Montserrat', sans-serif;
+}
